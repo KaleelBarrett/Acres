@@ -1,0 +1,538 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #faffe0;
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  background-color: #fff;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1500px;
+  margin: auto;
+}
+
+.logo img {
+  margin-top: 30px;
+  height: 40px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #333;
+  padding: 6px 12px;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #ff6600;
+}
+
+.contact-button {
+  background-color: #ff6600;
+  color: #fff !important;
+  padding: 6px 14px;
+  border-radius: 6px;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  padding: 0 12px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-btn:hover {
+  color: #ff6600;  /* text color changes on hover */
+}
+
+
+
+.hero-section {
+  background-image: url('./assets/pexels.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Overlay content over the background */
+.overlay-content {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 800px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.hook {
+  font-size: 2.8rem;
+  color: #2e7d32;
+  margin-bottom: 20px;
+}
+
+.body {
+  font-size: 1.2rem;
+  color: #444;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.learn-butt {
+  background-color: #ff6f00;
+  color: white;
+  border: none;
+  padding: 15px 35px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.learn-butt:hover {
+  background-color: #e65c00;
+}
+
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .hook {
+    font-size: 2rem;
+  }
+
+  .body {
+    font-size: 1rem;
+  }
+
+  .learn-butt {
+    padding: 12px 25px;
+    font-size: 0.95rem;
+  }
+
+  .overlay-content {
+    padding: 25px;
+  }
+}
+
+
+.About {
+  font-family: 'Arial', sans-serif;
+  padding: 40px 20px;
+  margin-top: 1000px;
+  max-width: 1400px;
+  margin: 0 auto;
+  color: #333;
+}
+
+
+.about-top {
+  position: relative; /* establish a positioning context */
+}
+
+/* Shared section styling */
+.about-middle,
+.about-bottom {
+  position: relative;
+  margin-bottom: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 100px;
+}
+
+.about-middle{
+  margin-bottom: 100px;
+}
+
+/* Optionally add padding-top or margin-top on <p> to avoid content hiding */
+.intro {
+  margin: 70px auto;
+  max-width: 600px;
+  text-align: center;
+}
+
+
+/* Logo container / image box */
+.logo-container {
+  background-image: url('./assets/acres.png');
+  height: 250px;
+
+  /* Make sure the entire image fits without cropping */
+  background-size: contain;
+
+  /* Center the image */
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* Optional: use flexbox to center any content inside */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.pic1-container {
+  background-image: url('./assets/pic2.jpg');
+  flex: 1 1 300px;
+  height: 700px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  margin-left: -600px; /* shifts left */
+}
+
+.pic2-container {
+  background-image: url('./assets/pic2.jpg');
+  flex: 1 1 300px;
+  height: 700px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  margin-right: -600px; /* shifts right */
+}
+
+
+/* Text content */
+.intro,
+.about-middle p,
+.about-bottom p {
+  flex: 2 1 400px;
+  font-size: 1.5rem;
+}
+
+
+.about-middle p,
+.about-bottom p {
+  max-width: 600px;
+}
+
+/* Headings */
+.about-middle h2,
+.about-bottom h2 {
+  flex-basis: 100%;
+  font-size: 2rem;
+  color: #2e7d32;
+  margin: 20px 0 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-top,
+  .about-middle,
+  .about-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo-container,
+  .pic1-container,
+  .pic2-container {
+    width: 100%;
+  }
+
+  .about-middle h2,
+  .about-bottom h2 {
+    font-size: 1.6rem;
+  }
+
+  .intro,
+  .about-middle p,
+  .about-bottom p {
+    font-size: 1rem;
+  }
+}
+
+.flex {
+    display: flex;
+    gap: 40px; /* Reduced from 80px for better spacing */
+    flex-wrap: wrap;
+    justify-content: center; /* Center cards horizontally */
+    max-width: 1500px;
+    margin: 0 auto; /* Center the flex container in its parent */
+    padding: 40px 20px; /* Add spacing around cards */
+    box-sizing: border-box;
+}
+
+.card {
+    background-color: #2e7d32;
+    border-radius: 12px;
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    flex: 1 1 300px; 
+    height: 400px;
+}
+
+.group-title {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 30px;
+  color: #2e7d32;
+  font-weight: 700;
+}
+
+.card-img1,
+.card-img2,
+.card-img3 {
+  width: 100%;
+  height: 200px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-img1 img,
+.card-img2 img {
+  max-width: 200px;
+  height: auto;
+}
+
+.card-img1 {
+  background: url('./assets/pic2.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.card-img2 {
+  background: url('./assets/pic2.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.card-img3 {
+  background: url('./assets/pic2.jpg') no-repeat center center;
+  background-size: cover;
+}
+/* Arrow Styling */
+.btn-red {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background-color: #d32f2f;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-red:hover {
+  background-color: #b71c1c;
+}
+
+.arrow {
+  font-size: 1.2em;
+}
+
+/* Extra Text Link */
+.text-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #ffffff;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+/* Contact Css */
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #b71c1c;
+  padding: 40px 20px;
+  max-width: 1800px;
+  margin: 0 auto;
+  color: white;
+  text-align: center;
+}
+
+.contact-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px; /* <-- this is your horizontal spacing */
+  flex-wrap: wrap; /* ensures responsiveness on small screens */
+}
+
+.contact-container h1{
+  font-size: 3rem;
+}
+
+/* Style individual elements */
+.logo {
+  width: auto;
+  height: 100px;
+  object-fit: fill;
+}
+
+.contact-container .btn-red {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+
+.arrow-button {
+  background-color: #fff;
+  color: #b71c1c;
+  border: none;
+  width: 60px;          /* Equal width and height */
+  height: 60px;
+  border-radius: 50%;   /* Makes it a perfect circle */
+  display: flex;        /* Use flexbox to center content */
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Optional shadow */
+}
+
+.arrow-button:hover {
+  background-color: #f5f5f5;
+}
+
+.contact-container .arrow {
+  font-size: 1.8em;
+}
+
+.footer {
+  padding: 20px 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Flex container to align logo, links, and newsletter inline */
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1500px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+/* Add horizontal spacing between children */
+.footer-container > * {
+  margin: 0 20px;
+}
+
+/* Logo image */
+.footer-container .logo img {
+  height: 60px; /* Or adjust between 60px to 100px based on your layout */
+  object-fit: contain;
+  margin-top: 50px;
+}
+
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-links h3 {
+  width: 100%;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+
+.footer-links a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #333;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s, color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ff6f00;
+  transform: translateY(-2px);
+}
+
+.footer-links svg {
+  width: 25px;
+  height: 25px;
+}
+
+/* Newsletter form */
+.newsletter form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.newsletter input[type="email"] {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 25px;
+  width: 200px;
+  outline: none;
+  flex-grow: 0;
+}
+
+.newsletter button {
+  background-color: #ff6f00;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 25px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter button:hover {
+  background-color: #e65c00;
+}
+
+/* Footer bottom center */
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #555;
+}
