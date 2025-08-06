@@ -31,7 +31,7 @@ const Navbar = () => {
           <img src="/acres.png" alt="Acres Logo" />
         </Link>
         <nav className="nav-links">
-          <Link to="/">Home</Link>
+          <button onClick={() => handleScrollTo('home')} className="nav-btn">Home</button>
           <button onClick={() => handleScrollTo('about')} className="nav-btn">About</button>
           <button onClick={() => handleScrollTo('group')} className="nav-btn">Services</button>
           <button onClick={() => handleScrollTo('contact')} className="nav-btn">Contact</button>
